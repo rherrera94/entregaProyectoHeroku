@@ -1,6 +1,5 @@
 import axios from "axios";
 import React from "react";
-//import Libros from './cardLGender';
 import Product from './cardProduct';
 import Productnew from './formNewProduct';
 
@@ -18,10 +17,8 @@ export default function Productos() {
   function ListadeProductos(){
     const listadoProducto = async () => {
       try {
-        //consulto al backend las categorias
-        console.log("ingresa")
+
         const respuesta = await axios.get("/productos/listar");
-        console.log(respuesta)
         setProductos(respuesta.data);
         setError("no")
       } catch (e) {
@@ -59,8 +56,7 @@ export default function Productos() {
   }
      
 /***********************************************************************************************/
-/* Aca comienza lo que se mostrará por pantalla. Según lo que me haya ido tirando el backend o */
-/* los botones que el usuario haya elegido presionar se mostraran diferentes pantallas.        */    
+/* Aca comienza lo que se mostrará por pantalla. Según lo que me haya ido tirando el backend   */    
 /***********************************************************************************************/
 
 if (error === "no") {
