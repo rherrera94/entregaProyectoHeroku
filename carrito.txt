@@ -1,0 +1,1 @@
+[{"timestamp":"7/8/2021 12:57:56","producto":{"timestamp":"7/8/2021 11:26:26","nombre":"regla","descripcion":"descripcion","codigo":80,"foto":"foto","precio":100,"stock":100,"id":2},"id":1}]
