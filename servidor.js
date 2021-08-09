@@ -12,9 +12,9 @@ const port= process.env.PORT? process.env.PORT:8080;
 app.use('/productos',rutasProductos);
 app.use('/carrito',rutasCarrito);
 if (process.env.NODE_ENV==="prod"){
-    app.use(express.static(__dirname+'/public/final'));
+    app.use(express.static(__dirname+'/public/build'));
     app.get('/',(req,res)=>{
-        res.sendFile(__dirname+'/public/final/'+'index.html')
+        res.sendFile(__dirname+'/public/build/'+'index.html')
     })
 }
 app.use((req, res) => {

@@ -65,7 +65,7 @@ export default function Productos() {
 
 if (error === "no") {
       //aca entra si no hubo error 
-      return (
+return (
         <div className="flex-container">
             <div className="col-md"></div>
             <div className="col-md-3">
@@ -79,7 +79,7 @@ if (error === "no") {
                             </div>
                             <div className="card-footer">
                               <div className="btn-group" role="group" aria-label="Basic Example">
-                              <button type="button" className="btn btn-primary" onClick={() => borrador(unProducto.id) }>Borrar</button>      
+                              <button type="button" className="btn btn-primary" onClick={() => borrador(unProducto.id) }>Borrar</button>            
                               </div>
                             </div>
                           </div>
@@ -111,9 +111,6 @@ if (error === "no") {
                   <div className="card-body">
                     <h5 className="card-title">Error {error}</h5>        
                   </div>
-                  <button type="button" className="btn btn-primary" onClick={() =>{setError(0); ListadeProductos(); } }>
-                      Volver
-                    </button>
                 </div>
               </div>
             </div>

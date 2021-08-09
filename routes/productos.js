@@ -22,7 +22,7 @@ routerProductos.get('/listar/:id?',async (req,res)=>{
         }
         
     }catch(e){
-        res.json ({"error": e.message});
+        res.status(404).json ({"error": e.message});
     }
 })
 
@@ -56,7 +56,7 @@ routerProductos.post('/agregar',isAdmin,async (req,res)=>{
         }
         res.json(resultado);
     }catch(e){
-        res.json({"error":e.message});
+        res.status(404).json({"error":e.message});
     }
 })
 /**
@@ -92,7 +92,7 @@ routerProductos.put('/actualizar/:id',isAdmin,async(req,res)=>{
         }
 
     }catch(e){
-        res.send({"error": e.message});
+        res.status(404).send({"error": e.message});
     }    
 })
 /**
@@ -109,7 +109,7 @@ routerProductos.put('/actualizar/:id',isAdmin,async(req,res)=>{
         }
         res.json(borrado);
     }catch(e){
-        res.json({"error":e.message});
+        res.status(404).json({"error":e.message});
     }    
 })
 

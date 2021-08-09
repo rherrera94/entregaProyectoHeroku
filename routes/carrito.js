@@ -23,7 +23,7 @@ routerCarrito.get('/listar/:id?',async (req,res)=>{
         }
         
     }catch(e){
-        res.json ({"error": e.message});
+        res.status(404).json ({"error": e.message});
     }
 })
 
@@ -51,7 +51,7 @@ routerCarrito.post('/agregar/:id_producto',isAdmin,async (req,res)=>{
         }
         res.json(resultado);
     }catch(e){
-        res.json({"error":e.message});
+        res.status(404).json({"error":e.message});
     }
 })
 /**
@@ -68,7 +68,7 @@ routerCarrito.post('/agregar/:id_producto',isAdmin,async (req,res)=>{
         }
         res.json(borrado);
     }catch(e){
-        res.json({"error":e.message});
+        res.status(404).json({"error":e.message});
     }    
 })
 
