@@ -4,7 +4,8 @@
   "description": "Primera Entrega del proyecto final del curso de programación Backend de CoderHouse",
   "main": "index.js",
   "scripts": {
-    "start": "node servidor.js"
+    "start": "node servidor.js",
+    "heroku-postbuild":"NPM_CONFIG_PRODUCTION=false npm install --prefix public && npm run build --prefix public"
   },
   "repository": {
     "type": "git",
