@@ -16,6 +16,9 @@ if (process.env.NODE_ENV==="prod"){
     app.get('/',(req,res)=>{
         res.sendFile(__dirname+'/public/build/'+'index.html')
     })
+    app.get('*',(req,res)=>{
+        res.sendFile(__dirname+'/public/build/'+'index.html')
+    })
 }
 app.use((req, res) => {
     res.json({"error":"Ruta no encontrada","descripcion": `ruta ${req.originalUrl} no implementada` });
