@@ -13,9 +13,8 @@ ingresar en la carpeta principal y poner el comando
 npm i
 
 IMPORTANTE: de querer ejecutar el front y el backend en dos puertos diferentes (osea levantar por
-un lado el front y por el otro el backend) se debera agregarle al package.json de la carpeta public la siguiente linea:
+un lado el front y por el otro el backend) 
 
-"proxy":"http://localhost:8080",
 ademas hacer los siguientes pasos:
 en el archivo .env poner una variable llamada NODE_ENV y asignarle el valor dev.
 ejecutar el comando node servidor.js en la carpeta principal
