@@ -50,8 +50,8 @@ export default function Productnew(){
 
     return (
         <div>
-          <div className="card">
-            <div className="card-body card-gender-new">
+          <div className="card distancia-box">
+            <div className="card-body card-product-new">
             <h5 className="card-title">Agregar Producto</h5>
             <input type="number" name="id" placeholder="id" className="form-control" onChange={(e) => {
                 setId(e.target.value);

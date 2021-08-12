@@ -2,7 +2,7 @@ import axios from "axios";
 import React from "react";
 import Product from './cardProduct';
 import Productnew from './formNewProduct';
-
+import { Link } from "react-router-dom";
 
 export default function Productos() {
   const [error, setError] = React.useState("no");
@@ -62,20 +62,21 @@ export default function Productos() {
 if (error === "no") {
       //aca entra si no hubo error 
 return (
-        <div className="flex-container">
+        <div className="flex-container posicion">
             <div className="col-md"></div>
             <div className="col-md-3">
               {productos.map((unProducto, index) => {
                       return (
                         <div key={index}>
                         <div className="col-md-10">
-                          <div className="card">
-                            <div className="card-body card-gender-new">
+                          <div className="card distancia-card-producto">
+                            <div className="card-body card-product-new">
                               <Product unProducto={unProducto} index={index}/>   
                             </div>
                             <div className="card-footer">
                               <div className="btn-group" role="group" aria-label="Basic Example">
                               <button type="button" className="btn btn-primary" onClick={() => borrador(unProducto.id) }>Borrar</button>            
+                              <Link to={"/products/editar/"+ unProducto.id.toString()} type="button" className="btn btn-primary">Editar </Link>
                               </div>
                             </div>
                           </div>

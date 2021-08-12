@@ -14,7 +14,7 @@ export default function Productsavedc(){
                 <p className="card-text">   Producto: {params.nombre}</p>
                 
             </div>
-                <div className="card-footer card-gender-new">
+                <div className="card-footer card-product-new">
                     <Link to="/carrito" className="btn btn-primary boton">Volver</Link>
                 </div>
             </div>    

@@ -6,10 +6,19 @@
   height: 40vmin;
   pointer-events: none;
 }
-.card-gender-new{
+.card-product-new{
   display:flex;
   flex-direction: column;
   align-items: center;
+}
+.posicion{
+  display:flex;
+}
+.distancia-card-producto, .distancia-box{
+  margin:7px;
+}
+.tamaño-box{
+  display:flex;
 }
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {

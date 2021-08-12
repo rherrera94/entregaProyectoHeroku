@@ -62,15 +62,15 @@ export default function Carrito() {
 if (error === "no") {
       //aca entra si no hubo error 
 return (
-        <div className="flex-container">
+        <div className="flex-container posicion">
             <div className="col-md"></div>
             <div className="col-md-3">
               {productos.map((unProducto, index) => {
                       return (
                         <div key={index}>
                         <div className="col-md-10">
-                          <div className="card">
-                            <div className="card-body card-gender-new">
+                          <div className="card distancia-card-product">
+                            <div className="card-body card-product-new ">
                               <Product unProducto={unProducto} index={index}/>   
                             </div>
                             <div className="card-footer">
